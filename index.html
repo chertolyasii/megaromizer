@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MegaROMizer — Активация полной версии</title>
     <style>
+        /* СТИЛИ (без изменений) */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #F0F0F0;
@@ -178,7 +179,7 @@
         <div id="payment-info" class="payment-info">
             <div style="font-weight: 600; margin-bottom: 15px;">✅ Отправь перевод на карту:</div>
             <div class="payment-details" id="card-number">
-                2200 1234 5678 9012
+                2200 1234 5678 9012  ← ЗАМЕНИ НА СВОЮ КАРТУ
             </div>
             <div style="font-size: 14px; margin: 15px 0; color: #666;">
                 Получатель: Игорь Ч.<br>
@@ -197,6 +198,21 @@
     </div>
 
     <script>
+        // ========== АВТОПОДСТАНОВКА HWID ИЗ URL ==========
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const hwid = urlParams.get('hwid');
+            if (hwid) {
+                const hwidInput = document.getElementById('hwid');
+                hwidInput.value = hwid;
+                
+                // Подсвечиваем зелёным, что подставилось
+                hwidInput.style.borderColor = '#009900';
+                hwidInput.style.backgroundColor = '#F0FFF0';
+            }
+        });
+        // =================================================
+
         function validateHWID(hwid) {
             const pattern = /^[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}$/;
             return pattern.test(hwid);
@@ -238,10 +254,7 @@
             );
             
             // ← ТВОЙ TELEGRAM
-            window.open(`https://t.me/chertolyasii?text=${message}`, '_blank');
-            
-            // Дублируем в ВК (опционально)
-            // window.open(`https://vk.com/writeтвой_id?text=${message}`, '_blank');
+            window.open(`https://t.me/igorc?text=${message}`, '_blank');
         }
     </script>
 </body>
