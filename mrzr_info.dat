@@ -11,6 +11,6 @@ VK_CLUB=vk.com/sega_my
 AUTHOR_ID=4153848
 AUTHOR_NAME=Игорь Чертоляс
 
-LATEST_VERSION=1.11.0
+LATEST_VERSION=1.0.0
 VERSION_INFO=• Улучшена сортировка по жанрам\n• Добавлены новые игры\n• Исправлены ошибки
 VERSION_URL=Скачать: https://github.com/chertolyasii/megaromizer/releases/latest
