@@ -12,3 +12,6 @@ AUTHOR_NAME=Игорь Чертоляс
 WELCOME=🎮 MegaROMizer • ПРОБНАЯ ВЕРСИЯ
 BUTTON_TEXT=💬 НАПИСАТЬ АВТОРУ С HWID
 FOOTER=После перевода нажми кнопку — HWID улетит мне в ЛС
+LATEST_VERSION=1.1
+VERSION_INFO=🔔 Доступна новая версия 1.1!\n   • Улучшена сортировка по жанрам\n   • Добавлены новые игры\n   • Исправлены ошибки
+VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
