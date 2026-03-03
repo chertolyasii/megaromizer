@@ -23,13 +23,6 @@
 
 ---
 
-<!-- СКРИНШОТ -->
-<p align="center">
-  <img src="main_window.png" alt="Главное окно MegaROMizer" width="80%">
-</p>
-
----
-
 ## 📋 Содержание
 - [💻 Системные требования](#system)
 - [📁 Состав дистрибутива](#files)
@@ -39,6 +32,13 @@
 - [🛠️ Использование](#usage)
 - [🔐 Активация полной версии](#activation)
 - [📬 Поддержка и обратная связь](#support)
+
+---
+
+<!-- СКРИНШОТ -->
+<p align="center">
+  <img src="main_window.png" alt="Главное окно MegaROMizer" width="80%">
+</p>
 
 ---
 
