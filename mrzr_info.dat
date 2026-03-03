@@ -12,9 +12,9 @@ author_name = Игорь Чертоляс
 
 [SUPPORT]
 thanks = 490
-megathanks = 890
+megathanks = 1000
 
 [VERSION]
-latest = 1.0.0
+latest = 1.0.1
 info = • Улучшена сортировка по жанрам\n• Добавлены новые игры\n• Исправлены ошибки
 url = https://github.com/chertolyasii/megaromizer/releases/latest
