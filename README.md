@@ -1,6 +1,11 @@
 # MegaROMizer v1.0.0
 
 <p align="left">
+  <img src="https://img.shields.io/badge/SEGA-Mega%20Drive %2F Genesis-0160B4" alt="SEGA">
+  <img src="https://img.shields.io/badge/Windows-10 %2F 11-green" alt="Windows">
+</p>
+
+<p align="left">
   <b>MegaROMizer</b> — умный сортировщик ROM'ов для SEGA Mega Drive / Genesis<br>
   с интуитивно понятным интерфейсом и 17 вариантами сборки на основе собственной базы данных.<br>
   Разработан специально для владельцев флешкартриджей и пользователей эмуляторов.
