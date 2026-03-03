@@ -14,7 +14,7 @@
 
 <p align="left">
   <a href="https://github.com/chertolyasii/megaromizer/releases/latest">
-    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНИЙ%20РЕЛИЗ-0160B4?style=for-the-badge" alt="Download">
+    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНЯЯ%20ВЕРСИЯ-0160B4?style=for-the-badge" alt="Download">
   </a>
 </p>
 
