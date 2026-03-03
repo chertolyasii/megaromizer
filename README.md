@@ -6,13 +6,13 @@
   <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version">
 </p>
 
-<p align="center">
+<p align="left">
   <b>MegaROMizer</b> — умный сортировщик ROM'ов для SEGA Mega Drive / Genesis<br>
   с интуитивно понятным интерфейсом и 17 вариантами сборки на основе собственной базы данных.<br>
   Разработан специально для владельцев флешкартриджей и пользователей эмуляторов.
 </p>
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/chertolyasii/megaromizer/releases/latest">
     <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНИЙ%20РЕЛИЗ-0160B4?style=for-the-badge" alt="Download">
   </a>
