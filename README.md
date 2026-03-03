@@ -21,6 +21,8 @@
   </a>
 </p>
 
+---
+
 <!-- СКРИНШОТ -->
 <p align="center">
   <img src="main_window.png" alt="Главное окно MegaROMizer" width="80%">
