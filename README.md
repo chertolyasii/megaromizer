@@ -2,7 +2,7 @@
 
 <p align="left">
   <img src="https://img.shields.io/badge/SEGA-Mega%20Drive %2F Genesis-0160B4" alt="SEGA">
-  <img src="https://img.shields.io/badge/Windows-10%2F11-blue" alt="Windows">
+  <img src="https://img.shields.io/badge/Windows-10%2F11-green" alt="Windows">
 </p>
 
 <p align="left">
@@ -13,7 +13,7 @@
 
 <p align="left">
   <a href="https://github.com/chertolyasii/megaromizer/releases/latest">
-    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНЯЯ%20ВЕРСИЯ-green?style=for-the-badge" alt="Download">
+    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНЯЯ%20ВЕРСИЯ-blue?style=for-the-badge" alt="Download">
   </a>
 </p>
 
