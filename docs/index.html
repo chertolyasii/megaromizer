@@ -33,7 +33,8 @@
         /* Синяя шапка */
         .header {
             background: #0160B4;
-            padding: 28px 24px 20px;
+            padding: 24px 20px 18px;
+            text-align: center;
         }
         
         .header h1 {
@@ -87,7 +88,7 @@
         }
         
         .card-price {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 800;
             margin-bottom: 10px;
             text-align: right;
@@ -105,7 +106,7 @@
             gap: 5px;
         }
         
-        /* РЕКВИЗИТЫ - компактнее */
+        /* РЕКВИЗИТЫ */
         .payment-section {
             background: #F0F0F0;
             border-radius: 14px;
@@ -125,7 +126,7 @@
             align-items: center;
             background: white;
             border-radius: 10px;
-            padding: 10px 12px;
+            padding: 8px 12px;
             margin-bottom: 6px;
         }
         
@@ -133,7 +134,7 @@
             font-weight: 600;
             color: #0160B4;
             font-size: 13px;
-            min-width: 50px;
+            min-width: 45px;
         }
         
         .payment-value {
@@ -143,6 +144,7 @@
             color: #0160B4;
             flex: 1;
             text-align: center;
+            margin: 0 8px;
         }
         
         .copy-mini-btn {
@@ -153,12 +155,13 @@
             padding: 5px 10px;
             font-size: 12px;
             cursor: pointer;
+            white-space: nowrap;
         }
         
         .payment-name-row {
             background: white;
             border-radius: 10px;
-            padding: 10px 12px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
         }
@@ -224,7 +227,7 @@
         .contacts {
             display: flex;
             gap: 10px;
-            margin: 16px 0 10px;
+            margin: 16px 0 5px;
         }
         
         .btn-vk, .btn-tg {
@@ -252,16 +255,8 @@
         
         /* Шаг 4 */
         .step4 {
-            margin-top: 20px;
-            padding-top: 5px;
-        }
-        
-        .footer {
-            background: #0160B4;
-            padding: 10px 20px;
-            text-align: right;
-            color: white;
-            font-size: 12px;
+            margin-top: 16px;
+            padding-top: 0;
         }
         
         .notification {
@@ -286,24 +281,11 @@
             85% { opacity: 1; transform: translate(-50%, 0); }
             100% { opacity: 0; transform: translate(-50%, -20px); }
         }
-        
-        .alternative {
-            text-align: center;
-            color: #666;
-            font-size: 12px;
-            margin: 10px 0 5px;
-        }
-        
-        .email {
-            color: #0160B4;
-            font-weight: 600;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- Синяя шапка -->
+        <!-- Синяя шапка по центру -->
         <div class="header">
             <h1>MegaROMizer</h1>
             <p>Активация полной версии</p>
@@ -332,14 +314,14 @@
                 </div>
             </div>
             
-            <!-- РЕКВИЗИТЫ (компактно) -->
+            <!-- РЕКВИЗИТЫ -->
             <div class="payment-section" id="paymentSection">
                 <div class="payment-title">💳 Реквизиты для перевода</div>
                 
                 <div class="payment-row">
                     <span class="payment-label">СБП</span>
                     <span class="payment-value" id="sbpDisplay">+7 (967) 889-71-21</span>
-                    <button class="copy-mini-btn" onclick="copyText('+79678897121')">📋</button>
+                    <button class="copy-mini-btn" onclick="copyText('+79678897121')">Копировать</button>
                 </div>
                 
                 <div class="payment-name-row">
@@ -364,21 +346,13 @@
             
             <div class="contacts">
                 <a href="#" id="vkLink" class="btn-vk" target="_blank">ВКонтакте</a>
-                <a href="#" id="tgLink" class="btn-tg" target="_blank">Telegram</a>
-            </div>
-            
-            <div class="alternative">
-                или <a href="mailto:igor.chertolyas@yandex.ru" class="email">igor.chertolyas@yandex.ru</a>
+                <a href="#" id="tgLink" class="btn-tg">Telegram</a>
             </div>
             
             <!-- ШАГ 4: Введи ключ в окне программы -->
             <div class="step4">
                 <div class="step-title">4. Введи ключ в окне программы</div>
             </div>
-        </div>
-        
-        <div class="footer">
-            С уважением, Чертоляс Игорь
         </div>
     </div>
 
@@ -442,6 +416,17 @@
             }
         }
         
+        function openVKApp() {
+            const hwid = document.getElementById('hwid-display').textContent.replace(/-/g, '');
+            // Пробуем открыть в приложении VK
+            window.location.href = `vk://im/convo/-222665229?sel=${hwid}`;
+            
+            // Если не сработало, через 500мс открываем в браузере
+            setTimeout(() => {
+                window.open(`https://vk.com/im/convo/-222665229?sel=${hwid}`, '_blank');
+            }, 500);
+        }
+        
         async function init() {
             const prices = await loadPrices();
             document.getElementById('price-basic').innerHTML = prices.thanks + ' ₽';
@@ -456,7 +441,20 @@
             };
             
             const cleanHWID = formattedHWID.replace(/-/g, '');
-            document.getElementById('vkLink').href = `https://vk.com/im/convo/-222665229?sel=${cleanHWID}`;
+            
+            // VK - пытаемся открыть в приложении
+            document.getElementById('vkLink').onclick = function(e) {
+                e.preventDefault();
+                // Пробуем открыть в приложении VK
+                window.location.href = `vk://im/convo/-222665229?sel=${cleanHWID}`;
+                
+                // Если не сработало, через 500мс открываем в браузере
+                setTimeout(() => {
+                    window.open(`https://vk.com/im/convo/-222665229?sel=${cleanHWID}`, '_blank');
+                }, 500);
+            };
+            
+            // TG - оставляем как есть (отлично работает)
             document.getElementById('tgLink').href = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
         }
         
