@@ -428,14 +428,7 @@
         
         function openVKChat() {
             const hwid = document.getElementById('hwid-display').textContent.replace(/-/g, '');
-            
-            // Пробуем открыть в приложении VK
-            window.location.href = `vk://im?peer=-222665229&msg=${hwid}`;
-            
-            // Если не сработало, через 500мс открываем в браузере
-            setTimeout(() => {
-                window.open(`https://vk.com/im?peer=-222665229&msg=${hwid}`, '_blank');
-            }, 500);
+            location.href = `vk://im?sel=-222665229&msg=${hwid}`;
         }
         
         async function init() {
