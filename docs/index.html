@@ -23,18 +23,18 @@
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: flex-start;  /* Меняем с center на flex-start */
-            padding: 0;  /* Убираем паддинги */
+            align-items: flex-start;
+            padding: 0;
         }
         
         .card {
             max-width: 520px;
             width: 100%;
             background: white;
-            border-radius: 0 0 24px 24px;  /* Скругляем только нижние углы */
+            border-radius: 0 0 24px 24px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
-            margin: 0;  /* Убираем все марджины */
+            margin: 0;
         }
         
         /* Синяя шапка по центру */
@@ -249,6 +249,7 @@
             color: white;
             text-decoration: none;
             font-size: 14px;
+            display: block;
         }
         
         .btn-vk {
@@ -426,11 +427,6 @@
             }
         }
         
-        function openVKChat() {
-            const hwid = document.getElementById('hwid-display').textContent.replace(/-/g, '');
-            location.href = `vk://im?sel=-222665229&msg=${hwid}`;
-        }
-        
         async function init() {
             const prices = await loadPrices();
             document.getElementById('price-basic').innerHTML = prices.thanks + ' ₽';
@@ -446,12 +442,17 @@
             
             const cleanHWID = formattedHWID.replace(/-/g, '');
             
+            // ВК - работает везде (и в браузере, и в приложении)
             document.getElementById('vkLink').onclick = function(e) {
                 e.preventDefault();
-                openVKChat();
+                window.location.href = `https://vk.com/im?sel=-222665229&msg=${cleanHWID}`;
             };
             
-            document.getElementById('tgLink').href = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
+            // TG
+            document.getElementById('tgLink').onclick = function(e) {
+                e.preventDefault();
+                window.location.href = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
+            };
         }
         
         init();
