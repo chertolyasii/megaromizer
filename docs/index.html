@@ -30,7 +30,7 @@
             box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
         }
         
-        /* СИНЯЯ ШАПКА (как в прошлой версии) */
+        /* Синяя шапка */
         .header {
             background: #0160B4;
             padding: 28px 24px 20px;
@@ -56,12 +56,13 @@
             padding: 24px 24px 28px;
         }
         
-        /* Шаг 1 - заголовок */
+        /* Заголовки шагов - жёстче */
         .step-title {
             color: #0160B4;
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 800;
+            font-size: 17px;
             margin-bottom: 12px;
+            letter-spacing: -0.2px;
         }
         
         /* Плашки с ценами */
@@ -104,41 +105,41 @@
             gap: 6px;
         }
         
-        /* РЕКВИЗИТЫ (как в прошлой версии) */
+        /* РЕКВИЗИТЫ - компактнее */
         .payment-section {
             background: #F0F0F0;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 24px 0;
+            border-radius: 16px;
+            padding: 16px;
+            margin: 20px 0 24px;
         }
         
         .payment-title {
             color: #0160B4;
             font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 16px;
+            font-size: 16px;
+            margin-bottom: 12px;
         }
         
         .payment-row {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             background: white;
-            border-radius: 16px;
-            padding: 14px 16px;
-            margin-bottom: 10px;
+            border-radius: 12px;
+            padding: 12px 14px;
+            margin-bottom: 8px;
         }
         
         .payment-label {
             font-weight: 600;
             color: #0160B4;
-            min-width: 70px;
+            font-size: 14px;
+            min-width: 60px;
         }
         
         .payment-value {
             font-family: 'Courier New', monospace;
-            font-weight: 700;
-            font-size: 18px;
+            font-weight: 600;
+            font-size: 16px;
             color: #0160B4;
             flex: 1;
             text-align: center;
@@ -148,30 +149,29 @@
             background: #0160B4;
             color: white;
             border: none;
-            border-radius: 30px;
+            border-radius: 20px;
             padding: 6px 12px;
-            font-weight: 600;
             font-size: 13px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 4px;
         }
         
-        .payment-name {
+        .payment-name-row {
             background: white;
-            border-radius: 16px;
-            padding: 14px 16px;
+            border-radius: 12px;
+            padding: 12px 14px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
         
-        .payment-hint {
-            font-size: 13px;
-            color: #666;
-            margin-top: 12px;
-            text-align: center;
+        .bank-badge {
+            background: #0160B4;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+            white-space: nowrap;
         }
         
         /* HWID секция */
@@ -179,7 +179,7 @@
             background: #F0F0F0;
             border-radius: 16px;
             padding: 16px;
-            margin: 16px 0 20px;
+            margin: 8px 0 16px;
         }
         
         .hwid-label {
@@ -199,32 +199,31 @@
             flex: 1;
             background: white;
             border-radius: 30px;
-            padding: 14px 16px;
+            padding: 14px 12px;
             font-family: 'Courier New', monospace;
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 15px;
             color: #0160B4;
             border: 1px solid #0160B4;
             text-align: center;
             letter-spacing: 1px;
         }
         
-        .copy-btn {
+        .copy-icon-btn {
             background: #0160B4;
             color: white;
             border: none;
             border-radius: 30px;
-            padding: 14px 20px;
-            font-weight: 600;
-            font-size: 14px;
+            width: 48px;
+            height: 48px;
+            font-size: 20px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 5px;
-            white-space: nowrap;
+            justify-content: center;
         }
         
-        .copy-btn:active {
+        .copy-icon-btn:active {
             background: #003575;
         }
         
@@ -258,17 +257,25 @@
             opacity: 0.8;
         }
         
-        .alternative {
-            text-align: center;
-            color: #666;
-            font-size: 13px;
-            margin: 12px 0 8px;
+        /* Шаг 4 */
+        .step4 {
+            background: #F0F0F0;
+            border-radius: 16px;
+            padding: 16px;
+            margin-top: 16px;
+            border-left: 4px solid #009900;
         }
         
-        .email {
+        .step4-title {
+            color: #009900;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .step4-text {
+            font-size: 14px;
             color: #0160B4;
-            font-weight: 600;
-            text-decoration: none;
         }
         
         .footer {
@@ -286,9 +293,10 @@
             transform: translateX(-50%);
             background: #009900;
             color: white;
-            padding: 12px 24px;
-            border-radius: 40px;
+            padding: 10px 20px;
+            border-radius: 30px;
             font-weight: 600;
+            font-size: 14px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             z-index: 1000;
             animation: fadeInOut 1.5s ease;
@@ -310,19 +318,32 @@
             margin-bottom: 16px;
             text-align: center;
         }
+        
+        .alternative {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin: 12px 0 8px;
+        }
+        
+        .email {
+            color: #0160B4;
+            font-weight: 600;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <!-- СИНЯЯ ШАПКА (как в прошлой версии) -->
+        <!-- Синяя шапка -->
         <div class="header">
             <h1>MegaROMizer</h1>
             <p>Активация полной версии</p>
         </div>
         
         <div class="content">
-            <!-- ШАГ 1 -->
-            <div class="step-title">1. Выбери, как хочешь поддержать развитие проекта</div>
+            <!-- ШАГ 1: Поддержи развитие проекта -->
+            <div class="step-title">1. Поддержи развитие проекта</div>
             
             <!-- Плашки с ценами -->
             <div class="cards">
@@ -343,43 +364,36 @@
                 </div>
             </div>
             
-            <!-- РЕКВИЗИТЫ (под плашками) -->
+            <!-- РЕКВИЗИТЫ (компактно) -->
             <div class="payment-section" id="paymentSection">
                 <div class="payment-title">💳 Реквизиты для перевода</div>
                 
                 <div class="payment-row">
-                    <span class="payment-label">СБП:</span>
+                    <span class="payment-label">СБП</span>
                     <span class="payment-value" id="sbpDisplay">+7 (967) 889-71-21</span>
-                    <button class="copy-mini-btn" onclick="copyText('+79678897121')">
-                        <span>📋</span> Копировать
-                    </button>
+                    <button class="copy-mini-btn" onclick="copyText('+79678897121')">📋</button>
                 </div>
                 
-                <div class="payment-name">
-                    <span class="payment-label">Получатель:</span>
-                    <span style="font-weight: 600;">Игорь Чертоляс</span>
-                </div>
-                
-                <div class="payment-hint">
-                    После перевода отправь HWID в один из мессенджеров ниже
+                <div class="payment-name-row">
+                    <span class="payment-label">Получатель</span>
+                    <span style="font-weight: 600; flex: 1; text-align: center;">Игорь Чертоляс</span>
+                    <span class="bank-badge">Т-Банк</span>
                 </div>
             </div>
             
-            <!-- ШАГ 2 -->
-            <div class="step-title">2. Скопируй свой HWID (уникален для этого ПК)</div>
+            <!-- ШАГ 2: Скопируй HWID -->
+            <div class="step-title">2. Скопируй HWID</div>
             
             <div class="hwid-section">
-                <div class="hwid-label">Твой HWID:</div>
+                <div class="hwid-label">Твой идентификатор ПК:</div>
                 <div class="hwid-container">
                     <div class="hwid-value" id="hwid-display">XXXX-XXXX-XXXX-XXXX</div>
-                    <button class="copy-btn" id="copyButton">
-                        <span>📋</span> КОПИРОВАТЬ
-                    </button>
+                    <button class="copy-icon-btn" id="copyButton" title="Копировать HWID">📋</button>
                 </div>
             </div>
             
-            <!-- ШАГ 3 -->
-            <div class="step-title">3. Отправь HWID мне (для получения ключа)</div>
+            <!-- ШАГ 3: Отправь мне -->
+            <div class="step-title">3. Отправь HWID мне</div>
             
             <div class="contacts">
                 <a href="#" id="vkLink" class="btn-vk" target="_blank">ВКонтакте</a>
@@ -387,7 +401,16 @@
             </div>
             
             <div class="alternative">
-                или пиши на <a href="mailto:igor.chertolyas@yandex.ru" class="email">igor.chertolyas@yandex.ru</a>
+                или <a href="mailto:igor.chertolyas@yandex.ru" class="email">igor.chertolyas@yandex.ru</a>
+            </div>
+            
+            <!-- ШАГ 4: Введи ключ -->
+            <div class="step4">
+                <div class="step4-title">4. Введи полученный ключ</div>
+                <div class="step4-text">
+                    Ключ придёт от бота после перевода.<br>
+                    Вставь его в поле активации в программе — и всё готово! 🚀
+                </div>
             </div>
         </div>
         
@@ -449,18 +472,6 @@
                     megathanks: info.MEGATHANKS || '890'
                 };
             } catch (e) {
-                document.getElementById('paymentSection').innerHTML = 
-                    '<div class="offline-badge">🌐 Нет интернета, но реквизиты те же:</div>' +
-                    '<div class="payment-row">' +
-                    '<span class="payment-label">СБП:</span>' +
-                    '<span class="payment-value">+7 (967) 889-71-21</span>' +
-                    '<button class="copy-mini-btn" onclick="copyText(\'+79678897121\')">📋</button>' +
-                    '</div>' +
-                    '<div class="payment-name">' +
-                    '<span class="payment-label">Получатель:</span>' +
-                    '<span style="font-weight: 600;">Игорь Чертоляс</span>' +
-                    '</div>';
-                
                 return {
                     thanks: '490',
                     megathanks: '890'
@@ -479,10 +490,6 @@
             
             document.getElementById('copyButton').onclick = function() {
                 copyText(formattedHWID);
-                this.innerHTML = '<span>✅</span> СКОПИРОВАНО!';
-                setTimeout(() => {
-                    this.innerHTML = '<span>📋</span> КОПИРОВАТЬ';
-                }, 1500);
             };
             
             const cleanHWID = formattedHWID.replace(/-/g, '');
