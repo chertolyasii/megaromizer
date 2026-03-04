@@ -34,7 +34,6 @@
         .header {
             background: #0160B4;
             padding: 28px 24px 20px;
-            text-align: center;
         }
         
         .header h1 {
@@ -53,15 +52,15 @@
         }
         
         .content {
-            padding: 24px 24px 28px;
+            padding: 20px 24px 24px;
         }
         
-        /* Заголовки шагов - жёстче */
+        /* Заголовки шагов - единый стиль */
         .step-title {
             color: #0160B4;
             font-weight: 800;
-            font-size: 17px;
-            margin-bottom: 12px;
+            font-size: 16px;
+            margin-bottom: 10px;
             letter-spacing: -0.2px;
         }
         
@@ -69,13 +68,13 @@
         .cards {
             display: flex;
             gap: 10px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
         }
         
         .card-basic, .card-premium {
             flex: 1;
-            border-radius: 16px;
-            padding: 16px 14px;
+            border-radius: 14px;
+            padding: 12px 14px;
             color: white;
         }
         
@@ -88,58 +87,59 @@
         }
         
         .card-price {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            text-align: right;
         }
         
         .card-features {
             list-style: none;
-            font-size: 13px;
-            line-height: 1.6;
+            font-size: 12px;
+            line-height: 1.5;
         }
         
         .card-features li {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
         
         /* РЕКВИЗИТЫ - компактнее */
         .payment-section {
             background: #F0F0F0;
-            border-radius: 16px;
-            padding: 16px;
-            margin: 20px 0 24px;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 8px 0 20px;
         }
         
         .payment-title {
             color: #0160B4;
             font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 12px;
+            font-size: 15px;
+            margin-bottom: 10px;
         }
         
         .payment-row {
             display: flex;
             align-items: center;
             background: white;
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 8px;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-bottom: 6px;
         }
         
         .payment-label {
             font-weight: 600;
             color: #0160B4;
-            font-size: 14px;
-            min-width: 60px;
+            font-size: 13px;
+            min-width: 50px;
         }
         
         .payment-value {
             font-family: 'Courier New', monospace;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 15px;
             color: #0160B4;
             flex: 1;
             text-align: center;
@@ -149,27 +149,27 @@
             background: #0160B4;
             color: white;
             border: none;
-            border-radius: 20px;
-            padding: 6px 12px;
-            font-size: 13px;
+            border-radius: 16px;
+            padding: 5px 10px;
+            font-size: 12px;
             cursor: pointer;
         }
         
         .payment-name-row {
             background: white;
-            border-radius: 12px;
-            padding: 12px 14px;
+            border-radius: 10px;
+            padding: 10px 12px;
             display: flex;
             align-items: center;
         }
         
         .bank-badge {
-            background: #0160B4;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
+            background: #FFD700;
+            color: black;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
             margin-left: 10px;
             white-space: nowrap;
         }
@@ -177,16 +177,9 @@
         /* HWID секция */
         .hwid-section {
             background: #F0F0F0;
-            border-radius: 16px;
-            padding: 16px;
-            margin: 8px 0 16px;
-        }
-        
-        .hwid-label {
-            color: #0160B4;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 8px;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 5px 0 16px;
         }
         
         .hwid-container {
@@ -198,11 +191,11 @@
         .hwid-value {
             flex: 1;
             background: white;
-            border-radius: 30px;
-            padding: 14px 12px;
+            border-radius: 25px;
+            padding: 12px 12px;
             font-family: 'Courier New', monospace;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             color: #0160B4;
             border: 1px solid #0160B4;
             text-align: center;
@@ -213,10 +206,10 @@
             background: #0160B4;
             color: white;
             border: none;
-            border-radius: 30px;
-            width: 48px;
-            height: 48px;
-            font-size: 20px;
+            border-radius: 25px;
+            width: 42px;
+            height: 42px;
+            font-size: 18px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -231,18 +224,18 @@
         .contacts {
             display: flex;
             gap: 10px;
-            margin: 16px 0 12px;
+            margin: 16px 0 10px;
         }
         
         .btn-vk, .btn-tg {
             flex: 1;
-            padding: 16px;
-            border-radius: 40px;
+            padding: 14px;
+            border-radius: 30px;
             text-align: center;
             font-weight: 700;
             color: white;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
         }
         
         .btn-vk {
@@ -259,31 +252,16 @@
         
         /* Шаг 4 */
         .step4 {
-            background: #F0F0F0;
-            border-radius: 16px;
-            padding: 16px;
-            margin-top: 16px;
-            border-left: 4px solid #009900;
-        }
-        
-        .step4-title {
-            color: #009900;
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-        
-        .step4-text {
-            font-size: 14px;
-            color: #0160B4;
+            margin-top: 20px;
+            padding-top: 5px;
         }
         
         .footer {
             background: #0160B4;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-align: right;
             color: white;
-            font-size: 13px;
+            font-size: 12px;
         }
         
         .notification {
@@ -309,21 +287,11 @@
             100% { opacity: 0; transform: translate(-50%, -20px); }
         }
         
-        .offline-badge {
-            background: #E79300;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 12px;
-            font-size: 13px;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-        
         .alternative {
             text-align: center;
             color: #666;
-            font-size: 13px;
-            margin: 12px 0 8px;
+            font-size: 12px;
+            margin: 10px 0 5px;
         }
         
         .email {
@@ -375,25 +343,24 @@
                 </div>
                 
                 <div class="payment-name-row">
-                    <span class="payment-label">Получатель</span>
+                    <span class="payment-label">Кому</span>
                     <span style="font-weight: 600; flex: 1; text-align: center;">Игорь Чертоляс</span>
                     <span class="bank-badge">Т-Банк</span>
                 </div>
             </div>
             
-            <!-- ШАГ 2: Скопируй HWID -->
-            <div class="step-title">2. Скопируй HWID</div>
+            <!-- ШАГ 2: Скопируй свой HWID -->
+            <div class="step-title">2. Скопируй свой HWID</div>
             
             <div class="hwid-section">
-                <div class="hwid-label">Твой идентификатор ПК:</div>
                 <div class="hwid-container">
                     <div class="hwid-value" id="hwid-display">XXXX-XXXX-XXXX-XXXX</div>
                     <button class="copy-icon-btn" id="copyButton" title="Копировать HWID">📋</button>
                 </div>
             </div>
             
-            <!-- ШАГ 3: Отправь мне -->
-            <div class="step-title">3. Отправь HWID мне</div>
+            <!-- ШАГ 3: Отправь HWID для получения ключа -->
+            <div class="step-title">3. Отправь HWID для получения ключа</div>
             
             <div class="contacts">
                 <a href="#" id="vkLink" class="btn-vk" target="_blank">ВКонтакте</a>
@@ -404,13 +371,9 @@
                 или <a href="mailto:igor.chertolyas@yandex.ru" class="email">igor.chertolyas@yandex.ru</a>
             </div>
             
-            <!-- ШАГ 4: Введи ключ -->
+            <!-- ШАГ 4: Введи ключ в окне программы -->
             <div class="step4">
-                <div class="step4-title">4. Введи полученный ключ</div>
-                <div class="step4-text">
-                    Ключ придёт от бота после перевода.<br>
-                    Вставь его в поле активации в программе — и всё готово! 🚀
-                </div>
+                <div class="step-title">4. Введи ключ в окне программы</div>
             </div>
         </div>
         
