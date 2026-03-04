@@ -18,11 +18,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px;
+            padding: 12px;
         }
         
+        /* Главная карточка */
         .card {
-            max-width: 500px;
+            max-width: 520px;
             width: 100%;
             background: white;
             border-radius: 24px;
@@ -30,49 +31,75 @@
             box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
         }
         
+        /* Синий верх */
         .header {
             background: #0160B4;
-            padding: 32px 24px 20px;
-            text-align: center;
+            padding: 24px 20px 20px;
         }
         
-        .header h1 {
+        .hello {
             color: white;
-            font-size: 42px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            font-family: 'Impact', 'Arial Black', sans-serif;
-        }
-        
-        .header p {
-            color: rgba(255,255,255,0.9);
-            font-size: 16px;
-            line-height: 1.4;
-        }
-        
-        .content {
-            padding: 24px 24px 32px;
-        }
-        
-        .support-title {
-            color: #0160B4;
+            font-size: 20px;
             font-weight: 700;
-            font-size: 18px;
             margin-bottom: 12px;
         }
         
+        .story {
+            color: white;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+        
+        .plans {
+            color: white;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .plans-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        
+        .separator {
+            height: 1px;
+            background: white;
+            opacity: 0.3;
+            margin: 16px 0;
+        }
+        
+        .final-phrase {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Контент */
+        .content {
+            padding: 20px 20px 24px;
+        }
+        
+        /* Заголовки шагов */
+        .step-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        /* Плашки с ценами */
         .cards {
             display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
         
         .card-basic, .card-premium {
             flex: 1;
             border-radius: 16px;
-            padding: 16px 12px;
+            padding: 14px 12px;
             color: white;
         }
         
@@ -85,79 +112,93 @@
         }
         
         .card-price {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .card-features {
             list-style: none;
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 13px;
+            line-height: 1.5;
         }
         
         .card-features li {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
         }
         
-        .payment-section {
+        /* HWID секция */
+        .hwid-section {
             background: #F0F0F0;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 24px 0;
-        }
-        
-        .payment-title {
-            color: #0160B4;
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-        
-        .payment-details {
-            background: white;
             border-radius: 16px;
             padding: 16px;
-            font-size: 18px;
+            margin: 16px 0;
+        }
+        
+        .hwid-label {
+            color: #0160B4;
             font-weight: 600;
-            margin-bottom: 12px;
-            word-break: break-word;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .hwid-container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .hwid-value {
+            flex: 1;
+            background: white;
+            border-radius: 30px;
+            padding: 14px 16px;
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            font-size: 16px;
+            color: #0160B4;
+            border: 1px solid #0160B4;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .copy-btn {
+            background: #0160B4;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 14px 20px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 5px;
+            white-space: nowrap;
         }
         
-        .payment-name {
-            background: white;
-            border-radius: 16px;
-            padding: 16px;
-            font-size: 18px;
-            margin-bottom: 12px;
+        .copy-btn:active {
+            background: #003575;
         }
         
-        .payment-hint {
-            font-size: 14px;
-            color: #666;
-            margin-top: 8px;
-        }
-        
+        /* Контакты */
         .contacts {
             display: flex;
-            gap: 12px;
-            margin: 24px 0 16px;
+            gap: 10px;
+            margin: 16px 0;
         }
         
         .btn-vk, .btn-tg {
             flex: 1;
-            padding: 14px;
+            padding: 16px;
             border-radius: 40px;
             text-align: center;
-            font-weight: 600;
+            font-weight: 700;
             color: white;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
         }
         
         .btn-vk {
@@ -168,30 +209,46 @@
             background: #26A5E4;
         }
         
+        .btn-vk:active, .btn-tg:active {
+            opacity: 0.8;
+        }
+        
+        /* Альтернатива */
+        .alternative {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin: 16px 0 8px;
+        }
+        
+        .email {
+            color: #0160B4;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        /* Оранжевый бейдж для пробной версии */
+        .trial-badge {
+            background: #E79300;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        /* Футер */
         .footer {
             background: #0160B4;
-            padding: 12px 24px;
+            padding: 10px 20px;
             text-align: right;
             color: white;
-            font-size: 14px;
+            font-size: 13px;
         }
         
-        .copy-btn {
-            background: #0160B4;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            padding: 8px 16px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .copy-btn:hover {
-            background: #003575;
-        }
-        
+        /* Уведомление о копировании */
         .notification {
             position: fixed;
             bottom: 20px;
@@ -204,7 +261,7 @@
             font-weight: 600;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             z-index: 1000;
-            animation: fadeInOut 2s ease;
+            animation: fadeInOut 1.5s ease;
         }
         
         @keyframes fadeInOut {
@@ -214,78 +271,53 @@
             100% { opacity: 0; transform: translate(-50%, -20px); }
         }
         
-        /* Новые стили для HWID-блока */
-        .hwid-section {
-            background: #0160B4;
-            border-radius: 20px;
-            padding: 20px;
-            margin: 0 0 20px 0;
+        /* Стили для офлайн-режима (если цены не загрузятся) */
+        .offline-warning {
+            background: #E79300;
             color: white;
-        }
-        
-        .hwid-title {
+            padding: 12px;
+            border-radius: 12px;
             font-size: 14px;
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-        
-        .hwid-value {
-            background: rgba(255,255,255,0.2);
-            border-radius: 40px;
-            padding: 16px 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
+            margin-bottom: 16px;
             text-align: center;
-            margin-bottom: 12px;
-            word-break: break-word;
-        }
-        
-        .hwid-copy-btn {
-            background: white;
-            color: #0160B4;
-            border: none;
-            border-radius: 40px;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.2s;
-        }
-        
-        .hwid-copy-btn:hover {
-            background: #f0f0f0;
-        }
-        
-        .hwid-hint {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-top: 8px;
         }
     </style>
 </head>
 <body>
-    <div class="card" id="app">
+    <div class="card">
+        <!-- СИНИЙ ВЕРХ (как в программе) -->
         <div class="header">
-            <h1>MegaROMizer</h1>
-            <p>Активация полной версии</p>
-        </div>
-        
-        <div class="content">
-            <!-- БЛОК С HWID (будет показан только если есть в URL) -->
-            <div id="hwid-block" style="display: none;" class="hwid-section">
-                <div class="hwid-title">🔑 ТВОЙ HWID (для этого ПК)</div>
-                <div class="hwid-value" id="hwid-display"></div>
-                <button class="hwid-copy-btn" onclick="copyHwid()">📋 КОПИРОВАТЬ HWID</button>
-                <div class="hwid-hint">
-                    Скопируй и отправь в бот после перевода
-                </div>
+            <div class="hello">Привет! 👋 Понравился MegaROMizer? 🙂</div>
+            
+            <div class="story">
+                Сейчас MegaROMizer - это 2 года выверки базы, 2 месяца кодинга<br>
+                и десятки комментариев от подписчиков, благодаря которым<br>
+                появились режимы [1G1R] и [2P], да и вся программа в целом 💻<br>
+                🔥 И самое крутое - мы можем и дальше улучшать его так,<br>
+                как захотим: наши идеи, моё время, ваша поддержка 👍
             </div>
             
-            <!-- ЦЕНЫ -->
-            <div class="support-title">1. Выбери вариант поддержки</div>
+            <div class="plans">
+                <div class="plans-title">⚡ А вот эти идеи уже в работе:</div>
+                • Расширить сборки играми с русским переводом<br>
+                • Добавить отчёт о ненайденных в твоей коллекции играх<br>
+                • Научить работать с архивами (.7z, .rar, .zip)
+            </div>
+            
+            <div class="separator"></div>
+            
+            <div class="final-phrase">
+                Хочешь получить ПОЛНУЮ ВЕРСИЮ и помочь проекту расти?<br>
+                Тогда вот что попрошу сделать:
+            </div>
+        </div>
+        
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <div class="content" id="content">
+            <!-- ШАГ 1: ВЫБОР ПОДДЕРЖКИ -->
+            <div class="step-title">1. Выбери, как хочешь поддержать развитие проекта</div>
+            
+            <!-- Плашки с ценами (заполнятся через JS) -->
             <div class="cards">
                 <div class="card-basic">
                     <div class="card-price" id="price-basic">490 ₽</div>
@@ -304,42 +336,61 @@
                 </div>
             </div>
             
-            <!-- РЕКВИЗИТЫ -->
-            <div class="payment-section">
-                <div class="payment-title">💳 Реквизиты для перевода</div>
-                <div class="payment-details" id="sbp">
-                    +7 (967) 889-71-21
-                    <button class="copy-btn" onclick="copyToClipboard('+79678897121')">📋</button>
-                </div>
-                <div class="payment-name">Получатель: Игорь Чертоляс</div>
-                <div class="payment-hint">
-                    После перевода отправь HWID в один из мессенджеров ниже — получишь ключ
+            <!-- ШАГ 2: КОПИРОВАНИЕ HWID -->
+            <div class="step-title">2. Скопируй свой HWID (уникален для этого ПК)</div>
+            
+            <div class="hwid-section">
+                <div class="hwid-label">Твой HWID:</div>
+                <div class="hwid-container">
+                    <div class="hwid-value" id="hwid-display">XXXX-XXXX-XXXX-XXXX</div>
+                    <button class="copy-btn" id="copyButton">
+                        <span>📋</span> КОПИРОВАТЬ
+                    </button>
                 </div>
             </div>
             
-            <!-- КОНТАКТЫ ДЛЯ ПОЛУЧЕНИЯ КЛЮЧА -->
+            <!-- ШАГ 3: ОТПРАВКА -->
+            <div class="step-title">3. Отправь HWID мне (для получения реквизитов и ключа)</div>
+            
             <div class="contacts">
-                <a href="https://vk.com/im/convo/-222665229" class="btn-vk" target="_blank">ВКонтакте</a>
-                <a href="tg://resolve?domain=megaromizer_bot" class="btn-tg">Telegram</a>
+                <a href="#" id="vkLink" class="btn-vk" target="_blank">ВКонтакте</a>
+                <a href="#" id="tgLink" class="btn-tg" target="_blank">Telegram</a>
+            </div>
+            
+            <div class="alternative">
+                или пиши на <a href="mailto:igor.chertolyas@yandex.ru" class="email">igor.chertolyas@yandex.ru</a>
+            </div>
+            
+            <!-- СКРЫТЫЙ БЛОК С РЕКВИЗИТАМИ (показывается если интернет есть) -->
+            <div id="paymentSection" style="display: none;">
+                <div class="step-title" style="margin-top: 20px;">💳 Реквизиты для перевода</div>
+                
+                <div style="background: #F0F0F0; border-radius: 16px; padding: 16px; margin-top: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <span style="font-weight: 600;">📱 СБП:</span>
+                        <span style="font-family: monospace; font-weight: 700;" id="sbpDisplay">+7 (967) 889-71-21</span>
+                        <button class="copy-btn" style="padding: 6px 12px;" onclick="copyText('+79678897121')">📋</button>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-weight: 600;">Получатель:</span>
+                        <span>Игорь Чертоляс</span>
+                    </div>
+                </div>
             </div>
         </div>
         
+        <!-- ФУТЕР -->
         <div class="footer">
             С уважением, Чертоляс Игорь
         </div>
     </div>
 
     <script>
-        // Функции копирования
-        function copyToClipboard(text) {
+        // Функция копирования
+        function copyText(text) {
             navigator.clipboard.writeText(text).then(() => {
                 showNotification('Скопировано!');
             });
-        }
-        
-        function copyHwid() {
-            const hwid = document.getElementById('hwid-display').textContent;
-            copyToClipboard(hwid);
         }
         
         function showNotification(message) {
@@ -350,15 +401,26 @@
             
             setTimeout(() => {
                 notif.remove();
-            }, 2000);
+            }, 1500);
         }
         
-        // Получаем параметры из URL
-        function getUrlParams() {
-            const params = new URLSearchParams(window.location.search);
-            return {
-                hwid: params.get('hwid')
-            };
+        // Получаем HWID из URL
+        function getHWIDFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('hwid');
+        }
+        
+        // Форматируем HWID (если пришёл без дефисов)
+        function formatHWID(hwid) {
+            if (!hwid) return 'XXXX-XXXX-XXXX-XXXX';
+            
+            // Убираем всё кроме букв и цифр
+            const clean = hwid.replace(/[^A-Fa-f0-9]/g, '').toUpperCase();
+            
+            if (clean.length === 16) {
+                return clean.match(/.{1,4}/g).join('-');
+            }
+            return hwid; // возвращаем как есть, если не 16 символов
         }
         
         // Загрузка цен
@@ -383,6 +445,7 @@
                     megathanks: info.MEGATHANKS || '890'
                 };
             } catch (e) {
+                console.warn('Офлайн-режим: используем стандартные цены');
                 return {
                     thanks: '490',
                     megathanks: '890'
@@ -390,28 +453,52 @@
             }
         }
         
-        // Форматируем HWID (добавляем дефисы)
-        function formatHwid(hwid) {
-            if (!hwid) return '';
-            hwid = hwid.replace(/[^A-F0-9]/gi, '').toUpperCase();
-            if (hwid.length !== 16) return hwid;
-            return hwid.match(/.{4}/g).join('-');
+        // Проверка интернета
+        async function checkInternet() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/chertolyasii/megaromizer/main/mrzr_info.dat', {
+                    method: 'HEAD',
+                    timeout: 3000
+                });
+                return response.ok;
+            } catch {
+                return false;
+            }
         }
         
         // Инициализация
         async function init() {
+            // Загружаем цены
             const prices = await loadPrices();
-            document.getElementById('price-basic').textContent = prices.thanks + ' ₽';
-            document.getElementById('price-premium').textContent = prices.megathanks + ' ₽';
+            document.getElementById('price-basic').innerHTML = prices.thanks + ' ₽';
+            document.getElementById('price-premium').innerHTML = prices.megathanks + ' ₽';
             
-            // Проверяем HWID в URL
-            const params = getUrlParams();
-            if (params.hwid) {
-                const formattedHwid = formatHwid(params.hwid);
-                if (formattedHwid.length === 19) { // 16 символов + 3 дефиса
-                    document.getElementById('hwid-display').textContent = formattedHwid;
-                    document.getElementById('hwid-block').style.display = 'block';
-                }
+            // Получаем HWID из URL
+            const hwid = getHWIDFromURL();
+            const formattedHWID = formatHWID(hwid);
+            document.getElementById('hwid-display').textContent = formattedHWID;
+            
+            // Настраиваем кнопку копирования
+            document.getElementById('copyButton').onclick = function() {
+                copyText(formattedHWID);
+                this.innerHTML = '<span>✅</span> СКОПИРОВАНО!';
+                setTimeout(() => {
+                    this.innerHTML = '<span>📋</span> КОПИРОВАТЬ';
+                }, 1500);
+            };
+            
+            // Настраиваем ссылки на ботов (с предзаполненным HWID)
+            const cleanHWID = formattedHWID.replace(/-/g, '');
+            const vkLink = `https://vk.com/im/convo/-222665229?sel=${cleanHWID}`;
+            const tgLink = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
+            
+            document.getElementById('vkLink').href = vkLink;
+            document.getElementById('tgLink').href = tgLink;
+            
+            // Проверяем интернет для показа реквизитов
+            const hasInternet = await checkInternet();
+            if (hasInternet) {
+                document.getElementById('paymentSection').style.display = 'block';
             }
         }
         
