@@ -11,6 +11,12 @@
             box-sizing: border-box;
         }
         
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: #0160B4;
@@ -18,7 +24,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px;
+            padding: 0;
+            margin: 0;
         }
         
         .card {
@@ -28,12 +35,13 @@
             border-radius: 24px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
+            margin: 8px;
         }
         
-        /* Синяя шапка */
+        /* Синяя шапка по центру */
         .header {
             background: #0160B4;
-            padding: 24px 20px 18px;
+            padding: 20px 20px 18px;
             text-align: center;
         }
         
@@ -43,7 +51,7 @@
             font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-family: 'Impact', 'Arial Black', sans-serif;
         }
         
@@ -144,18 +152,21 @@
             color: #0160B4;
             flex: 1;
             text-align: center;
-            margin: 0 8px;
+            margin: 0 12px;  /* Увеличил отступы */
         }
         
-        .copy-mini-btn {
+        .copy-icon-mini {
             background: #0160B4;
             color: white;
             border: none;
-            border-radius: 16px;
-            padding: 5px 10px;
-            font-size: 12px;
+            border-radius: 18px;
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
             cursor: pointer;
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .payment-name-row {
@@ -321,7 +332,7 @@
                 <div class="payment-row">
                     <span class="payment-label">СБП</span>
                     <span class="payment-value" id="sbpDisplay">+7 (967) 889-71-21</span>
-                    <button class="copy-mini-btn" onclick="copyText('+79678897121')">Копировать</button>
+                    <button class="copy-icon-mini" onclick="copyText('+79678897121')">📋</button>
                 </div>
                 
                 <div class="payment-name-row">
@@ -345,7 +356,7 @@
             <div class="step-title">3. Отправь HWID для получения ключа</div>
             
             <div class="contacts">
-                <a href="#" id="vkLink" class="btn-vk" target="_blank">ВКонтакте</a>
+                <a href="#" id="vkLink" class="btn-vk">ВКонтакте</a>
                 <a href="#" id="tgLink" class="btn-tg">Telegram</a>
             </div>
             
@@ -416,14 +427,16 @@
             }
         }
         
-        function openVKApp() {
+        function openVKChat() {
             const hwid = document.getElementById('hwid-display').textContent.replace(/-/g, '');
+            
             // Пробуем открыть в приложении VK
-            window.location.href = `vk://im/convo/-222665229?sel=${hwid}`;
+            // Формат для личных сообщений группы
+            window.location.href = `vk://im?sel=-222665229&msg=${hwid}`;
             
             // Если не сработало, через 500мс открываем в браузере
             setTimeout(() => {
-                window.open(`https://vk.com/im/convo/-222665229?sel=${hwid}`, '_blank');
+                window.open(`https://vk.com/im?sel=-222665229&msg=${hwid}`, '_blank');
             }, 500);
         }
         
@@ -442,19 +455,13 @@
             
             const cleanHWID = formattedHWID.replace(/-/g, '');
             
-            // VK - пытаемся открыть в приложении
+            // VK - теперь правильно открывает чат с группой
             document.getElementById('vkLink').onclick = function(e) {
                 e.preventDefault();
-                // Пробуем открыть в приложении VK
-                window.location.href = `vk://im/convo/-222665229?sel=${cleanHWID}`;
-                
-                // Если не сработало, через 500мс открываем в браузере
-                setTimeout(() => {
-                    window.open(`https://vk.com/im/convo/-222665229?sel=${cleanHWID}`, '_blank');
-                }, 500);
+                openVKChat();
             };
             
-            // TG - оставляем как есть (отлично работает)
+            // TG - оставляем как есть
             document.getElementById('tgLink').href = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
         }
         
