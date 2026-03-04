@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>MegaROMizer · Активация</title>
+    <style>
+        /* Стили почти без изменений, только подправил цвета под твою тему */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0160B4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+        
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
+        }
+        
+        .header {
+            background: #0160B4;
+            padding: 32px 24px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .content {
+            padding: 24px 24px 32px;
+        }
+        
+        .support-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .cards {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .card-basic, .card-premium {
+            flex: 1;
+            border-radius: 16px;
+            padding: 16px 12px;
+            color: white;
+        }
+        
+        .card-basic {
+            background: #0160B4;
+        }
+        
+        .card-premium {
+            background: #009900;
+        }
+        
+        .card-price {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        
+        .card-features {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .card-features li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .payment-section {
+            background: #F0F0F0;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        
+        .payment-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .payment-details {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+        
+        .payment-name {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .payment-hint {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .contacts {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0 16px;
+        }
+        
+        .btn-vk, .btn-tg {
+            flex: 1;
+            padding: 14px;
+            border-radius: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .btn-vk {
+            background: #0077FF;
+        }
+        
+        .btn-tg {
+            background: #26A5E4;
+        }
+        
+        .qr-section {
+            text-align: center;
+            padding: 16px 0 8px;
+            border-top: 2px solid #F0F0F0;
+        }
+        
+        .qr-title {
+            color: #0160B4;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        #qrcode canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .footer {
+            background: #0160B4;
+            padding: 12px 24px;
+            text-align: right;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .update-badge {
+            background: #E79300;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        
+        .copy-btn {
+            background: #0160B4;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #003575;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #009900;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: fadeInOut 2s ease;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, 20px); }
+            15% { opacity: 1; transform: translate(-50%, 0); }
+            85% { opacity: 1; transform: translate(-50%, 0); }
+            100% { opacity: 0; transform: translate(-50%, -20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="app">
+        <div class="header">
+            <h1>MegaROMizer</h1>
+            <p>Активация полной версии</p>
+        </div>
+        
+        <div class="content">
+            <!-- ЦЕНЫ ПОДГРУЗЯТСЯ -->
+            <div class="support-title">1. Выбери вариант поддержки</div>
+            <div class="cards">
+                <div class="card-basic">
+                    <div class="card-price" id="price-basic">490 ₽</div>
+                    <ul class="card-features">
+                        <li>✓ Полная версия</li>
+                        <li>✓ Все будущие обновления</li>
+                    </ul>
+                </div>
+                <div class="card-premium">
+                    <div class="card-price" id="price-premium">890 ₽</div>
+                    <ul class="card-features">
+                        <li>✓ Полная версия</li>
+                        <li>✓ Все будущие обновления</li>
+                        <li>✓ Имя в благодарностях</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- РЕКВИЗИТЫ -->
+            <div class="payment-section">
+                <div class="payment-title">💳 Реквизиты для перевода</div>
+                <div class="payment-details" id="sbp">
+                    +7 (967) 889-71-21
+                    <button class="copy-btn" onclick="copyToClipboard('+79678897121')" style="float: right; padding: 4px 12px;">📋</button>
+                </div>
+                <div class="payment-name">Получатель: Игорь Чертоляс</div>
+                <div class="payment-hint">
+                    После перевода отправь HWID в один из мессенджеров ниже — получишь ключ
+                </div>
+            </div>
+            
+            <!-- КОНТАКТЫ ДЛЯ ПОЛУЧЕНИЯ КЛЮЧА -->
+            <div class="contacts">
+                <a href="https://vk.com/im/convo/-222665229" class="btn-vk" target="_blank">ВКонтакте</a>
+                <a href="tg://resolve?domain=megaromizer_bot" class="btn-tg">Telegram</a>
+            </div>
+            
+            <!-- QR-КОД ДЛЯ ТЕЛЕФОНА -->
+            <div class="qr-section">
+                <div class="qr-title">📱 Наведи камеру телефона</div>
+                <div class="qr-code" id="qrcode"></div>
+                <div style="margin-top: 12px; font-size: 14px; color: #666;">
+                    Откроется эта же страница на телефоне
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            С уважением, Чертоляс Игорь
+        </div>
+    </div>
+
+    <!-- Библиотеки -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    
+    <script>
+        // Функция копирования
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Скопировано!');
+            });
+        }
+        
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+            
+            setTimeout(() => {
+                notif.remove();
+            }, 2000);
+        }
+        
+        // Загрузка цен из локального mrzr_info.dat
+        async function loadPrices() {
+            try {
+                // Пробуем загрузить из локального файла
+                const response = await fetch('./mrzr_info.dat?t=' + Date.now());
+                const text = await response.text();
+                
+                const info = {};
+                text.split('\n').forEach(line => {
+                    line = line.trim();
+                    if (line && !line.startsWith('#')) {
+                        const [key, value] = line.split('=');
+                        if (key && value) {
+                            info[key.trim()] = value.trim();
+                        }
+                    }
+                });
+                
+                return {
+                    thanks: info.THANKS || '490',
+                    megathanks: info.MEGATHANKS || '890'
+                };
+            } catch (e) {
+                console.warn('Не удалось загрузить цены, используем значения по умолчанию');
+                return {
+                    thanks: '490',
+                    megathanks: '890'
+                };
+            }
+        }
+        
+        // Инициализация
+        async function init() {
+            const prices = await loadPrices();
+            
+            document.getElementById('price-basic').textContent = prices.thanks + ' ₽';
+            document.getElementById('price-premium').textContent = prices.megathanks + ' ₽';
+            
+            // Создаём QR-код с текущим URL
+            const qrDiv = document.getElementById('qrcode');
+            if (qrDiv) {
+                qrDiv.innerHTML = '';
+                new QRCode(qrDiv, {
+                    text: window.location.href,
+                    width: 200,
+                    height: 200,
+                    colorDark: "#0160B4",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        }
+        
+        init();
+    </script>
+</body>
+</html>
