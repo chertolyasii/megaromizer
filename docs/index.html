@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>MegaROMizer · Активация</title>
     <style>
         * {
@@ -12,30 +12,29 @@
         }
         
         html, body {
-            height: 100%;
             margin: 0;
             padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background: #0160B4;
         }
         
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0160B4;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0;
+            align-items: flex-start;  /* Меняем с center на flex-start */
+            padding: 0;  /* Убираем паддинги */
         }
         
         .card {
             max-width: 520px;
             width: 100%;
             background: white;
-            border-radius: 24px;
+            border-radius: 0 0 24px 24px;  /* Скругляем только нижние углы */
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
-            margin: 8px;
+            margin: 0;  /* Убираем все марджины */
         }
         
         /* Синяя шапка по центру */
@@ -152,7 +151,7 @@
             color: #0160B4;
             flex: 1;
             text-align: center;
-            margin: 0 12px;  /* Увеличил отступы */
+            margin: 0 12px;
         }
         
         .copy-icon-mini {
@@ -431,7 +430,6 @@
             const hwid = document.getElementById('hwid-display').textContent.replace(/-/g, '');
             
             // Пробуем открыть в приложении VK
-            // Формат для личных сообщений группы
             window.location.href = `vk://im?sel=-222665229&msg=${hwid}`;
             
             // Если не сработало, через 500мс открываем в браузере
@@ -455,13 +453,11 @@
             
             const cleanHWID = formattedHWID.replace(/-/g, '');
             
-            // VK - теперь правильно открывает чат с группой
             document.getElementById('vkLink').onclick = function(e) {
                 e.preventDefault();
                 openVKChat();
             };
             
-            // TG - оставляем как есть
             document.getElementById('tgLink').href = `tg://resolve?domain=megaromizer_bot&text=${cleanHWID}`;
         }
         
