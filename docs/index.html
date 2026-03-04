@@ -5,7 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>MegaROMizer · Активация</title>
     <style>
-        /* Добавляем стиль для HWID */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0160B4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+        
+        .card {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
+        }
+        
+        .header {
+            background: #0160B4;
+            padding: 32px 24px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .content {
+            padding: 24px 24px 32px;
+        }
+        
+        .support-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .cards {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .card-basic, .card-premium {
+            flex: 1;
+            border-radius: 16px;
+            padding: 16px 12px;
+            color: white;
+        }
+        
+        .card-basic {
+            background: #0160B4;
+        }
+        
+        .card-premium {
+            background: #009900;
+        }
+        
+        .card-price {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        
+        .card-features {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .card-features li {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .payment-section {
+            background: #F0F0F0;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+        
+        .payment-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .payment-details {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            word-break: break-word;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .payment-name {
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .payment-hint {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .contacts {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0 16px;
+        }
+        
+        .btn-vk, .btn-tg {
+            flex: 1;
+            padding: 14px;
+            border-radius: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .btn-vk {
+            background: #0077FF;
+        }
+        
+        .btn-tg {
+            background: #26A5E4;
+        }
+        
+        .footer {
+            background: #0160B4;
+            padding: 12px 24px;
+            text-align: right;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .copy-btn {
+            background: #0160B4;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #003575;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #009900;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: fadeInOut 2s ease;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, 20px); }
+            15% { opacity: 1; transform: translate(-50%, 0); }
+            85% { opacity: 1; transform: translate(-50%, 0); }
+            100% { opacity: 0; transform: translate(-50%, -20px); }
+        }
+        
+        /* Новые стили для HWID-блока */
         .hwid-section {
             background: #0160B4;
             border-radius: 20px;
@@ -55,9 +264,6 @@
             opacity: 0.8;
             margin-top: 8px;
         }
-        
-        /* Остальные стили без изменений */
-        /* ... (копируем все стили из предыдущей версии) ... */
     </style>
 </head>
 <body>
@@ -103,7 +309,7 @@
                 <div class="payment-title">💳 Реквизиты для перевода</div>
                 <div class="payment-details" id="sbp">
                     +7 (967) 889-71-21
-                    <button class="copy-btn" onclick="copyToClipboard('+79678897121')" style="float: right; padding: 4px 12px;">📋</button>
+                    <button class="copy-btn" onclick="copyToClipboard('+79678897121')">📋</button>
                 </div>
                 <div class="payment-name">Получатель: Игорь Чертоляс</div>
                 <div class="payment-hint">
@@ -123,8 +329,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-    
     <script>
         // Функции копирования
         function copyToClipboard(text) {
