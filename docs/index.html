@@ -128,30 +128,33 @@
         }
         
         .payment-row {
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr auto;  /* лейбл | номер | кнопка */
             align-items: center;
-            justify-content: space-between;  /* ← добавить */
+            gap: 12px;
             background: white;
             border-radius: 10px;
             padding: 8px 12px;
             margin-bottom: 6px;
         }
-        
+
         .payment-label {
             font-weight: 600;
             color: #0160B4;
             font-size: 13px;
-            min-width: 45px;
+            white-space: nowrap;
         }
-        
+
         .payment-value {
             font-family: 'Courier New', monospace;
             font-weight: 700;
             font-size: 15px;
             color: #0160B4;
             text-align: center;
+            justify-self: center;  /* центрирование в своей ячейке */
+            white-space: nowrap;
         }
-        
+
         .copy-icon-mini {
             background: #0160B4;
             color: white;
@@ -164,6 +167,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            justify-self: end;  /* прижимает кнопку к правому краю */
         }
         
         .payment-name-row {
