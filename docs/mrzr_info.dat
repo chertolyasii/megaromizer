@@ -13,13 +13,14 @@ AUTHOR_NAME=Игорь Чертоляс
 [SUPPORT]
 THANKS=490
 MEGATHANKS=890
-PHONE=+7 (967) 889-71-21
-RECIPIENT=Игорь Чертоляс
-BANK=Т-Банк
+PHONE=1+7 (967) 889-71-21
+RECIPIENT=2Игорь Чертоляс
+BANK=3Т-Банк
 
 [VERSION]
 LATEST_VERSION=1.0.1
 VERSION_INFO=• Улучшена сортировка по жанрам\n• Добавлены новые игры\n• Исправлены ошибки
 VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
+
 
 
