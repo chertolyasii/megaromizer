@@ -18,11 +18,12 @@ RECIPIENT=Игорь Чертоляс
 BANK=Т-Банк
 
 [VERSION]
-LATEST_VERSION=1.0.0
+LATEST_VERSION=1.0.1
 VERSION_INFO=• Улучшена сортировка по жанрам\n• Добавлены новые игры\n• Исправлены ошибки
 VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
-LATEST_DB_VERSION=100
+LATEST_DB_VERSION=101
 DB_CHANGES=• Добавлено 15 новых игр\n• Исправлены хеши для 8 ромов
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/download/database/mrzr_base_v100.dat
+
