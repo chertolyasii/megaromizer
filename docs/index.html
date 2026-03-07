@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>MegaROMizer · Активация</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background: #0160B4;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+        }
+        
+        .card {
+            max-width: 520px;
+            width: 100%;
+            background: white;
+            border-radius: 0 0 24px 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 20, 40, 0.3);
+            margin: 0;
+        }
+        
+        /* Синяя шапка по центру */
+        .header {
+            background: #0160B4;
+            padding: 20px 20px 18px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+        }
+        
+        .header p {
+            color: rgba(255,255,255,0.9);
+            font-size: 15px;
+        }
+        
+        .content {
+            padding: 20px 24px 24px;
+        }
+        
+        /* Заголовки шагов - единый стиль */
+        .step-title {
+            color: #0160B4;
+            font-weight: 800;
+            font-size: 16px;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+        
+        /* Плашки с ценами */
+        .cards {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        .card-basic, .card-premium {
+            flex: 1;
+            border-radius: 14px;
+            padding: 12px 14px;
+            color: white;
+        }
+        
+        .card-basic {
+            background: #0160B4;
+        }
+        
+        .card-premium {
+            background: #009900;
+        }
+        
+        .card-price {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        .card-features {
+            list-style: none;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .card-features li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* РЕКВИЗИТЫ */
+        .payment-section {
+            background: #F0F0F0;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 8px 0 20px;
+        }
+        
+        .payment-title {
+            color: #0160B4;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .payment-row {
+            display: grid;
+            grid-template-columns: auto 1fr auto;  /* лейбл | номер | кнопка */
+            align-items: center;
+            gap: 12px;
+            background: white;
+            border-radius: 10px;
+            padding: 8px 12px;
+            margin-bottom: 6px;
+        }
+
+        .payment-label {
+            font-weight: 600;
+            color: #0160B4;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .payment-value {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            font-size: 15px;
+            color: #0160B4;
+            text-align: center;
+            justify-self: center;  /* центрирование в своей ячейке */
+            white-space: nowrap;
+        }
+
+        .copy-icon-mini {
+            background: #0160B4;
+            color: white;
+            border: none;
+            border-radius: 18px;
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-self: end;  /* прижимает кнопку к правому краю */
+        }
+        
+        .payment-name-row {
+            background: white;
+            border-radius: 10px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .bank-badge {
+            background: #FFD700;
+            color: black;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+        
+        /* HWID секция */
+        .hwid-section {
+            background: #F0F0F0;
+            border-radius: 14px;
+            padding: 14px;
+            margin: 5px 0 16px;
+        }
+        
+        .hwid-container {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .hwid-value {
+            flex: 1;
+            background: white;
+            border-radius: 25px;
+            padding: 12px 12px;
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            font-size: 14px;
+            color: #0160B4;
+            border: 1px solid #0160B4;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .copy-icon-btn {
+            background: #0160B4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            width: 42px;
+            height: 42px;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .copy-icon-btn:active {
+            background: #003575;
+        }
+        
+        /* Контакты */
+        .contacts {
+            display: flex;
+            gap: 10px;
+            margin: 16px 0 5px;
+        }
+        
+        .btn-vk, .btn-tg {
+            flex: 1;
+            padding: 14px;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: block;
+        }
+        
+        .btn-vk {
+            background: #0077FF;
+        }
+        
+        .btn-tg {
+            background: #26A5E4;
+        }
+        
+        .btn-vk:active, .btn-tg:active {
+            opacity: 0.8;
+        }
+        
+        /* Шаг 4 */
+        .step4 {
+            margin-top: 16px;
+            padding-top: 0;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #009900;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: fadeInOut 1.5s ease;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, 20px); }
+            15% { opacity: 1; transform: translate(-50%, 0); }
+            85% { opacity: 1; transform: translate(-50%, 0); }
+            100% { opacity: 0; transform: translate(-50%, -20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Синяя шапка по центру -->
+        <div class="header">
+            <h1>MegaROMizer</h1>
+            <p>Активация полной версии</p>
+        </div>
+        
+        <div class="content">
+            <!-- ШАГ 1: Поддержи развитие проекта -->
+            <div class="step-title">1. Поддержи развитие проекта</div>
+            
+            <!-- Плашки с ценами -->
+            <div class="cards">
+                <div class="card-basic">
+                    <div class="card-price" id="price-basic">490 ₽</div>
+                    <ul class="card-features">
+                        <li>✓ Полная версия</li>
+                        <li>✓ Все обновления</li>
+                    </ul>
+                </div>
+                <div class="card-premium">
+                    <div class="card-price" id="price-premium">890 ₽</div>
+                    <ul class="card-features">
+                        <li>✓ Полная версия</li>
+                        <li>✓ Все обновления</li>
+                        <li>✓ Имя в благодарностях</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- РЕКВИЗИТЫ -->
+            <div class="payment-section" id="paymentSection">
+                <div class="payment-title">💳 Реквизиты для перевода</div>
+                
+                <div class="payment-row">
+                    <span class="payment-label">СБП</span>
+                    <span class="payment-value" id="sbpDisplay">+7 (967) 889-71-21</span>
+                    <button class="copy-icon-mini" onclick="copyText('+79678897121')">📋</button>
+                </div>
+                
+                <div class="payment-name-row">
+                    <span class="payment-label">Кому</span>
+                    <span style="font-weight: 600; flex: 1; text-align: center;">Игорь Чертоляс</span>
+                    <span class="bank-badge">Т-Банк</span>
+                </div>
+            </div>
+            
+            <!-- ШАГ 2: Скопируй свой HWID -->
+            <div class="step-title">2. Скопируй свой HWID</div>
+            
+            <div class="hwid-section">
+                <div class="hwid-container">
+                    <div class="hwid-value" id="hwid-display">XXXX-XXXX-XXXX-XXXX</div>
+                    <button class="copy-icon-btn" id="copyButton" title="Копировать HWID">📋</button>
+                </div>
+            </div>
+            
+            <!-- ШАГ 3: Отправь HWID для получения ключа -->
+            <div class="step-title">3. Отправь HWID для получения ключа</div>
+            
+            <div class="contacts">
+                <a href="#" id="vkLink" class="btn-vk">ВКонтакте</a>
+                <a href="#" id="tgLink" class="btn-tg">Telegram</a>
+            </div>
+            
+            <!-- ШАГ 4: Введи ключ в окне программы -->
+            <div class="step4">
+                <div class="step-title">4. Введи ключ в окне программы</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Скопировано!');
+            });
+        }
+        
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'notification';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+            
+            setTimeout(() => {
+                notif.remove();
+            }, 1500);
+        }
+        
+        function getHWIDFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('hwid');
+        }
+        
+        function formatHWID(hwid) {
+            if (!hwid) return 'XXXX-XXXX-XXXX-XXXX';
+            const clean = hwid.replace(/[^A-Fa-f0-9]/g, '').toUpperCase();
+            if (clean.length === 16) {
+                return clean.match(/.{1,4}/g).join('-');
+            }
+            return hwid;
+        }
+        
+        async function loadPrices() {
+            try {
+                const response = await fetch('./mrzr_info.dat?t=' + Date.now());
+                const text = await response.text();
+                
+                const info = {};
+                text.split('\n').forEach(line => {
+                    line = line.trim();
+                    if (line && !line.startsWith('#')) {
+                        const [key, value] = line.split('=');
+                        if (key && value) {
+                            info[key.trim()] = value.trim();
+                        }
+                    }
+                });
+                
+                return {
+                    thanks: info.THANKS || '490',
+                    megathanks: info.MEGATHANKS || '890'
+                };
+            } catch (e) {
+                return {
+                    thanks: '490',
+                    megathanks: '890'
+                };
+            }
+        }
+        
+        async function init() {
+            const prices = await loadPrices();
+            document.getElementById('price-basic').innerHTML = prices.thanks + ' ₽';
+            document.getElementById('price-premium').innerHTML = prices.megathanks + ' ₽';
+            
+            const hwid = getHWIDFromURL();
+            const formattedHWID = formatHWID(hwid);
+            document.getElementById('hwid-display').textContent = formattedHWID;
+            
+            document.getElementById('copyButton').onclick = function() {
+                copyText(formattedHWID);
+            };
+            
+            // ВК - работает везде (и в браузере, и в приложении)
+            document.getElementById('vkLink').onclick = function(e) {
+                e.preventDefault();
+                window.location.href = `https://vk.com/im?sel=-222665229`;
+            };
+            
+            // TG
+            document.getElementById('tgLink').onclick = function(e) {
+                e.preventDefault();
+                window.location.href = `tg://resolve?domain=megaromizer_bot`;
+            };
+        }
+        
+        init();
+    </script>
+</body>
+</html>
