@@ -24,5 +24,6 @@ VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
 LATEST_DB_VERSION=100
-DB_CHANGES=• Добавлено 15 новых игр\n• Исправлены хеши для 8 ромов
+DB_CHANGES=• Добавлено 2 хэша: Space Harrier II (Japan) (En) (Launch Cart), Super Thunder Blade (Japan) (En) (Launch Cart), новых игр\n• Исправлены хеши для 8 ромов
+
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/download/database/mrzr_base_v100.dat
