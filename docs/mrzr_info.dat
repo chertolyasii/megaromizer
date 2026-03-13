@@ -19,7 +19,7 @@ BANK=Т-Банк
 
 [VERSION]
 LATEST_VERSION=1.0.0
-VERSION_INFO=• Реализована поддержка .7z архивов\n• Исключено замирание прогресс-бара при сканировании\n• ...
+VERSION_INFO=• Реализована поддержка .7z архивов\n• Исключено замирание прогресс-бара при сканировании\n• Изменено название режима FULL на ТРИ РЕГИОНА+
 VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
@@ -27,5 +27,6 @@ LATEST_DB_VERSION=100
 DB_CHANGES=• Добавлено 2 хэша: Space Harrier II (Japan) (En) (Launch Cart), Super Thunder Blade (Japan) (En) (Launch Cart)\n• Исправлены хеши для 8 ромов
 
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/download/database/mrzr_base_v100.dat
+
 
 
