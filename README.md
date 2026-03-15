@@ -16,6 +16,12 @@
 </p>
 
 <p align="left">
+  <a href="https://github.com/chertolyasii/megaromizer/releases/latest">
+    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНЯЯ%20ВЕРСИЯ-blue?style=for-the-badge" alt="Download">
+  </a>
+</p>
+
+<p align="left">
   Программа сэкономит вам часы, дни, а может, и месяцы ручного перебора ROM'ов 
   и сделает всю работу за вас:
    <br> • найдёт лучшие ревизии среди ваших ROM'ов
@@ -27,13 +33,6 @@
   Останется только закинуть готовую сборку на флешкартридж или в эмулятор - 
   и больше не гадать, какую версию игры запускать 💪
 </p>
-
-<p align="left">
-  <a href="https://github.com/chertolyasii/megaromizer/releases/latest">
-    <img src="https://img.shields.io/badge/СКАЧАТЬ-ПОСЛЕДНЯЯ%20ВЕРСИЯ-blue?style=for-the-badge" alt="Download">
-  </a>
-</p>
-
 ---
 <details>
 <summary><b>📋 ПОКАЗАТЬ СОДЕРЖАНИЕ</b></summary>
