@@ -1,15 +1,9 @@
 # MegaROMizer v1.1.0
 
 <p align="left">
-  <a href="#">
-    <img src="https://img.shields.io/badge/SEGA-Mega%20Drive%20%2F%20Genesis-0160B4" alt="SEGA">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Windows-10%20%2F%2011-green" alt="Windows">
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Форматы-.bin%20.gen%20.md%20.smd%20.7z%20.zip-orange" alt="Formats">
-  </a>
+  <a href="#"><img src="https://img.shields.io/badge/SEGA-Mega%20Drive%20%2F%20Genesis-0160B4" alt="SEGA"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Windows-10%20%2F%2011-green" alt="Windows"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Форматы-.bin%20.gen%20.md%20.smd%20.7z%20.zip-orange" alt="Formats"></a>
 </p>
 
 <p align="left">
