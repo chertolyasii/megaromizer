@@ -18,8 +18,8 @@ RECIPIENT=Игорь Чертоляс
 BANK=Т-Банк
 
 [VERSION]
-LATEST_VERSION=1.0.0
-VERSION_INFO=• Реализована поддержка .7z и .zip архивов\n• Исключено замирание прогресс-бара при сканировании\n• Изменено название режима FULL на ТРИ РЕГИОНА+
+LATEST_VERSION=1.1.0
+VERSION_INFO=• Реализована поддержка .7z и .zip архивов\n• Добавлена опция "Распаковать архивы\n• Исключено замирание прогресс-бара при сканировании
 VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
