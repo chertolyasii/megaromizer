@@ -18,8 +18,8 @@ RECIPIENT=Игорь Чертоляс
 BANK=Т-Банк
 
 [VERSION]
-LATEST_VERSION=1.1.0
-VERSION_INFO=• Реализована поддержка .7z и .zip архивов\n• Добавлена опция "Распаковать архивы"\n• Исключено замирание прогресс-бара при сканировании
+LATEST_VERSION=1.2.0
+VERSION_INFO=• Новый режим [FULL] ВСЕ ВЕРСИИ\n• Предпросмотр создаваемой сборки\n• Добавление мультиплеерных игр
 VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
