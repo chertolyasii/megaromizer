@@ -24,7 +24,7 @@ VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [DATABASE]
 LATEST_DB_VERSION=120
-DB_CHANGES=• В мультиплеерные игры добавлены все спортивные игры + Fatal Rewind (Killing Game Show), Man Overboard! S.S. Lucifer, Master of Monsters, Michael Jackson's Moonwalker
+DB_CHANGES=• В мультиплеерные игры добавлены все спортивные игры + Fatal Rewind (Killing Game Show), Man Overboard! S.S. Lucifer, Master of Monsters, Michael Jackson's Moonwalker\n• Добавлены имена папок игр, создаваемых в режиме FULL 
 
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
