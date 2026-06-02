@@ -16,14 +16,3 @@ MEGATHANKS=890
 PHONE=+7 (967) 889-71-21
 RECIPIENT=Игорь Чертоляс
 BANK=Т-Банк
-
-[VERSION]
-LATEST_VERSION=1.5.0
-VERSION_INFO=• В предпросмотре теперь показаны отсутствующие в коллекции ROM'ы\n
-VERSION_URL=https://github.com/chertolyasii/megaromizer/releases/latest
-
-[DATABASE]
-LATEST_DB_VERSION=150
-DB_CHANGES=• Внесены имена ROM'ов для корректной работы предпросмотра 
-DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/latest
-
