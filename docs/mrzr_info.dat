@@ -27,6 +27,3 @@ LATEST_DB_VERSION=150
 DB_CHANGES=• Внесены имена ROM'ов для корректной работы предпросмотра 
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
-[UPDATE]
-ZIP_URL=https://github.com/chertolyasii/megaromizer/releases/latest/download/MegaROMizer_v{version}.zip
-
