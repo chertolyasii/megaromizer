@@ -28,7 +28,7 @@ DB_CHANGES=• Внесены имена ROM'ов для корректной р
 DB_UPDATE_URL=https://github.com/chertolyasii/megaromizer/releases/latest
 
 [UPDATE]
-EXE_URL=https://github.com/chertolyasii/megaromizer/releases/latest/download/MegaROMizer.exe
+EXE_URL=https://github.com/chertolyasii/megaromizer/releases/latest/download/MRZR.exe
 DAT_URL=https://github.com/chertolyasii/megaromizer/releases/latest/download/mrzr_base.dat
 
 
